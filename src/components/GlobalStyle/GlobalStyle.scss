@@ -1,0 +1,17 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Work+Sans:wght@300;400&display=swap');
+
+:root {
+    --font-heading: 'Bevan', cursive;
+    --font-text: 'Work Sans', sans-serif;
+    --white-color: #fff;
+    --black-color: #000;
+    --primary-color: #ccc;
+    --text-color: #0f3460;
+    --box-shadow-color: #16213e;
+}
+//
+html {
+    font-family: var(--font-text);
+    color: var(--text-color);
+}
