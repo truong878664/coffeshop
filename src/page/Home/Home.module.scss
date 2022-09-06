@@ -1,0 +1,14 @@
+.wrapper {
+    margin-top: 100px;
+}
+
+.heading {
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    color: var(--box-color);
+}
+
+.row-center {
+    display: flex;
+    justify-content: center;
+}

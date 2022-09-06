@@ -9,11 +9,11 @@ const cx = classNames.bind(style);
 function Dock() {
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('home', 'dock-btn', 'active')}>
+            <div className={cx('home', 'dock-btn')}>
                 <FontAwesomeIcon icon={faHouse} />
                 <p className={cx('span')}>Home</p>
             </div>
-            <div className={cx('product', 'dock-btn')}>
+            <div className={cx('product', 'dock-btn', 'active')}>
                 <FontAwesomeIcon icon={faMugSaucer} />
                 <p className={cx('span')}>Product</p>
             </div>
