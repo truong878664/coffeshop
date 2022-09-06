@@ -8,10 +8,18 @@
     --black-color: #000;
     --primary-color: #ccc;
     --text-color: #0f3460;
-    --box-shadow-color: #16213e;
+    --text-color-opacity: rgba(15, 52, 96, 0.7);
+    --box-color: #16213e;
+    --background-color: #fff5e4;
 }
 //
 html {
     font-family: var(--font-text);
     color: var(--text-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
