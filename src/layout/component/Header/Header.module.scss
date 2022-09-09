@@ -2,15 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    margin-top: 16px;
+    // margin-top: 16px;
+    padding: 40px 0 80px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%);
 }
 
 .logo {
@@ -19,8 +23,10 @@
     font-family: var(--font-heading);
 }
 
+//search
 .search {
-    width: 35%;
+    max-width: 300px;
+    width: 100%;
     height: 35px;
     border: 2px solid var(--box-color);
     background-color: var(--background-color);
@@ -28,12 +34,13 @@
     display: flex;
     align-items: center;
     box-shadow: 3px 3px 0 var(--box-color);
+    margin: 0 8px;
 }
 
 .search-input {
     height: 100%;
     flex: 1;
-    padding: 0 16px;
+    padding-left: 8px;
     background-color: transparent;
     outline: none;
     border: none;
@@ -49,7 +56,7 @@
     border-bottom-right-radius: 999px;
 
     &:hover {
-        background-color: #ffeeaf;
+        background-color: var(--btn-hover-color);
     }
 
     &::before {
@@ -64,14 +71,22 @@
     }
 }
 
+.row-space {
+    justify-content: space-around;
+    align-items: center;
+}
+
+//profile
 .profile {
     display: flex;
     align-items: center;
 }
 
 .avatar {
-    width: 36px;
-    height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: 2px solid var(--box-color);
     margin-right: 8px;

@@ -1,17 +1,24 @@
 import Home from '~/page/Home';
 import Product from '~/page/Product';
 import MainLayout from '~/layout/MainLayout';
+import routes from '~/config/routes';
+import PayLayout from '~/layout/Paylayout/Paylayout';
 
 const publicRoutes = [
     {
-        path: '/',
+        path: routes.home,
         element: Home,
         layout: MainLayout,
     },
     {
-        path: '/product',
+        path: routes.product,
         element: Product,
         layout: MainLayout,
+    },
+    {
+        path: routes.pay,
+        element: Home,
+        layout: PayLayout,
     },
 ];
 

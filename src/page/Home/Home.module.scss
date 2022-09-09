@@ -1,14 +1,19 @@
 .wrapper {
     margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .heading {
     margin-bottom: 10px;
     font-family: var(--font-heading);
     color: var(--box-color);
+    padding-top: 8px;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
 .row-center {
     display: flex;
     justify-content: center;
+    max-width: 1200px;
 }

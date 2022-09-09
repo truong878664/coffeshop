@@ -11,11 +11,19 @@
     --text-color-opacity: rgba(15, 52, 96, 0.7);
     --box-color: #16213e;
     --background-color: #fff5e4;
+    --red-color: #c21010;
+    --yellow-color: #ffb200;
+    --btn-hover-color: #ffeeaf;
 }
 //
 html {
     font-family: var(--font-text);
     color: var(--text-color);
+}
+
+body {
+    overflow-y: overlay;
+    overflow-x: overlay;
 }
 
 * {
@@ -24,6 +32,31 @@ html {
     box-sizing: border-box;
 }
 
-.abc {
-    color: aqua;
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+//scrollbar
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.5);
 }
