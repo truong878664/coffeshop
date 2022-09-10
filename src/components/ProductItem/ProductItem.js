@@ -13,7 +13,7 @@ function Product({ sticker, StickerPosition, large, src, name, price }) {
     const RandomRolate = () => Math.floor(Math.random() * 30 - 10);
     const RandomTranlatex = () => Math.floor(Math.random() * 20 + 10);
     const isDiscount = !isNaN(Number.parseInt(sticker));
-    const classes = cx('wrapper', { large });
+    const classes = cx('wrapper','product-item', { large });
 
     const setProductOderValue = useContext(CartOderContext);
 
@@ -29,8 +29,7 @@ function Product({ sticker, StickerPosition, large, src, name, price }) {
     };
 
     const handleOrder = (e) => {
-        const parent = getParent(e.target, 'ProductItem_wrapper__3ueCn');
-
+        const parent = getParent(e.target, 'product-item');
         const image = parent.querySelector('img').src;
         const name = parent.querySelector('.name').innerText;
         const size = e.target.innerText;

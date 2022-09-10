@@ -13,22 +13,53 @@ function Pay() {
             </div>
             <div className={cx('row')}>
                 <div className={cx('form', 'col', 'l-6')}>
+                    <div className={cx('row', 'heading-form')}>
+                        <div className={cx('col', 'l-12')}>
+                            <h4>Thông tin</h4>
+                        </div>
+                    </div>
                     <div className={cx('row')}>
-                        <input placeholder="Họ" className={cx('col', 'l-6', 'form-input')} />
-                        <input placeholder="Tên" className={cx('col', 'l-6', 'form-input')} />
-                        {/* <label>tên</label> */}
+                        <div className={cx('col', 'l-6')}>
+                            <div className={cx('form-input')}>
+                                <input placeholder=" " className={cx('input')}></input>
+                                <label>Họ</label>
+                            </div>
+                        </div>
+                        <div className={cx('col', 'l-6')}>
+                            <div className={cx('form-input')}>
+                                <input placeholder=" " className={cx('input')} />
+                                <label>Tên</label>
+                            </div>
+                        </div>
                     </div>
-                    <div className={cx('row', 'form-input')}>
-                        <input placeholder="Số điện thoại" className={cx('col', 'l-12', 'form-input')} />
+                    <div className={cx('row')}>
+                        <div className={cx('col', 'l-12')}>
+                            <div className={cx('form-input')}>
+                                <input placeholder=" " className={cx('input')} />
+                                <label>Số điện thoại</label>
+                            </div>
+                        </div>
                     </div>
-                    <div className={cx('row', 'form-input')}>
-                        <input placeholder="Địa chỉ" className={cx('col', 'l-12', 'form-input')} />
+                    <div className={cx('row')}>
+                        <div className={cx('col', 'l-12')}>
+                            <div className={cx('form-input')}>
+                                <input placeholder=" " className={cx('input')} />
+                                <label>Địa chỉ</label>
+                            </div>
+                        </div>
                     </div>
-                    <div className={cx('row', 'form-input')}>
-                        <input placeholder="Voucher" className={cx('col', 'l-12', 'form-input')} />
+                    <div className={cx('row')}>
+                        <div className={cx('col', 'l-12')}>
+                            <div className={cx('form-input')}>
+                                <input placeholder=" " className={cx('input')} />
+                                <label>Voucher</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className={cx('cart', 'col', 'l-6')}>cart</div>
+                <div className={cx('cart', 'col', 'l-6')}>
+                    <div className={cx('')}></div>
+                </div>
             </div>
         </div>
     );
