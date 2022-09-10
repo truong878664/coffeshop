@@ -4,15 +4,15 @@ import style from './Cart.module.scss';
 import images from '~/asscet/images';
 import { Link } from 'react-router-dom';
 import routes from '~/config/routes';
-import { PropProductOder } from '~/App';
+import { CartOderContext } from '~/Context/CartOderProvider.js';
 
 import ProductPay from './ProductPay';
 
 const cx = classNames.bind(style);
 
 function Cart() {
-    const PropProductOdervalue = useContext(PropProductOder);
-    const datas = PropProductOdervalue.productOder;
+    const CartOdervalue = useContext(CartOderContext);
+    const datas = CartOdervalue.productOder;
 
     return (
         <div className={cx('wrapper')}>

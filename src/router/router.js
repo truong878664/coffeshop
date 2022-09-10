@@ -3,6 +3,7 @@ import Product from '~/page/Product';
 import MainLayout from '~/layout/MainLayout';
 import routes from '~/config/routes';
 import PayLayout from '~/layout/Paylayout/Paylayout';
+import Pay from '~/page/Pay/Pay';
 
 const publicRoutes = [
     {
@@ -17,7 +18,7 @@ const publicRoutes = [
     },
     {
         path: routes.pay,
-        element: Home,
+        element: Pay,
         layout: PayLayout,
     },
 ];

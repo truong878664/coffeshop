@@ -6,6 +6,9 @@ import ProductItem from '~/components/ProductItem';
 const cx = classNames.bind(style);
 
 function Home() {
+    const titleElement = document.querySelector('title');
+    titleElement.innerText = 'See Tea | Home';
+
     return (
         <div className={cx('wrapper', 'grid', 'wide')}>
             <div className={cx('row')}>

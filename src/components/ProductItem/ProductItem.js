@@ -5,7 +5,7 @@ import { discount } from '~/components/function/function.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 
-import { PropProductOder } from '~/App.js';
+import { CartOderContext } from '~/Context/CartOderProvider.js';
 
 const cx = classNames.bind(style);
 
@@ -15,7 +15,7 @@ function Product({ sticker, StickerPosition, large, src, name, price }) {
     const isDiscount = !isNaN(Number.parseInt(sticker));
     const classes = cx('wrapper', { large });
 
-    const setProductOderValue = useContext(PropProductOder);
+    const setProductOderValue = useContext(CartOderContext);
 
     const getParent = (child, classParent) => {
         let parent = child.parentElement;

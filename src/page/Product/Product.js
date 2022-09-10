@@ -54,6 +54,9 @@ const MENU_ITEM = [
 ];
 
 function Product() {
+    const titleElement = document.querySelector('title');
+    titleElement.innerText = 'See Tea | Sản phẩm';
+
     const datas = [{ data: MENU_ITEM }];
     const [menuItem, setMenuItem] = useState(datas);
     const currentItem = menuItem[menuItem.length - 1];
