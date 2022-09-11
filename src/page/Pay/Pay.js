@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { CartOderContext } from '~/Context/CartOderProvider';
 import style from './Pay.module.scss';
 
 const cx = classNames.bind(style);
@@ -58,7 +59,26 @@ function Pay() {
                     </div>
                 </div>
                 <div className={cx('cart', 'col', 'l-6')}>
-                    <div className={cx('')}></div>
+                    <div className={cx('row')}>
+                        <div className={cx('col', 'l-12')}>
+                            <h3 className={cx('heading-cart')}>Your Cart</h3>
+                        </div>
+                    </div>
+                    <div className={cx('row')}>
+                        <div className={cx('col', 'l-12')}>
+                            <div className={cx('product-cart')}>product item</div>
+                        </div>
+                    </div>
+                    <div className={cx('row', 'footer-cart')}>
+                        <div className={cx('col', 'l-6')}>
+                            <button className={cx('cart-btn')}>Đặt hàng</button>
+                        </div>
+                        <div className={cx('col', 'l-6')}>
+                            <div className={cx('')}>
+                                <div>total</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

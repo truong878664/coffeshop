@@ -65,4 +65,41 @@
 //cart
 .cart {
     background-color: #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.heading-cart {
+    text-align: center;
+}
+
+.product-cart {
+    margin-bottom: 50px;
+}
+
+.footer-cart {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    width: 100%;
+}
+
+.cart-btn {
+    font-family: var(--font-heading);
+    height: 40px;
+    min-width: 150px;
+    background-color: var(--red-color);
+    color: #fff;
+    border-radius: 999px;
+    border: 2px solid var(--box-color);
+    box-shadow: 4px 4px 0 var(--box-color);
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(90%);
+    }
 }
