@@ -1,0 +1,151 @@
+[
+    {
+        "id": 1,
+        "name": "Trà ổi nhiệt đới",
+        "type": "tea",
+        "price": "35",
+        "label": "New",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/07_2022/thumbs/270_crop_oi-hong.png"
+    },
+    {
+        "id": 2,
+        "name": "Trà sen vàng",
+        "type": "tea",
+        "price": "45",
+        "label": "New",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png"
+    },
+    {
+        "id": 3,
+        "name": "Trà xanh đậu đỏ",
+        "type": "tea",
+        "price": "35",
+        "label": "New",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRAXANHDAUDO.png"
+    },
+
+    {
+        "id": 4,
+        "name": "Trà thạch vải",
+        "type": "tea",
+        "price": "39",
+        "label": "New",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+    },
+
+    {
+        "id": 5,
+        "name": "Trà thanh đào",
+        "type": "tea",
+        "price": "42",
+        "label": "Hot",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+    },
+    {
+        "id": 6,
+        "name": "CARAMEL PHIN FREEZE",
+        "type": "freeze",
+        "price": "35",
+        "label": "Hot",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png"
+    },
+
+    {
+        "id": 7,
+        "name": "Bạc sỉu đá",
+        "type": "coffee",
+        "price": "35",
+        "label": "Hot",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png"
+    },
+
+    {
+        "id": 8,
+        "name": "PHIN SỮA ĐÁ",
+        "type": "coffee",
+        "price": "35",
+        "label": "-25%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/PHIN-SUA-DA.png"
+    },
+
+    {
+        "id": 9,
+        "name": "Trà thạch vải",
+        "type": "tea",
+        "price": "35",
+        "label": "-12%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png"
+    },
+    {
+        "id": 10,
+        "name": "Trà thạch đào",
+        "type": "tea",
+        "price": "35",
+        "label": "-15%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRATHACHDAO.png"
+    },
+    {
+        "id": 11,
+        "name": "Trà trái cây",
+        "type": "tea",
+        "price": "40",
+        "label": "New",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRAXANHDAUDO.png"
+    },
+    {
+        "id": 12,
+        "name": "Trà vải nhiệt đới",
+        "type": "tea",
+        "price": "42",
+        "label": "-10%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+    },
+    {
+        "id": 13,
+        "name": "Trà đào cam sả",
+        "type": "tea",
+        "price": "30",
+        "label": "-30%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+    },
+    {
+        "id": 14,
+        "name": "Cà phê campuchino",
+        "type": "coffee",
+        "price": "25",
+        "label": "Hot",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png"
+    },
+    {
+        "id": 15,
+        "name": "Cà phê đen không đường",
+        "type": "coffee",
+        "price": "30",
+        "label": "-15%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png"
+    },
+    {
+        "id": 16,
+        "name": "FREEZE TRÀ XANH",
+        "type": "freeze",
+        "price": "42",
+        "label": "-25%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_GTF.png"
+    },
+    {
+        "id": 17,
+        "name": "COOKIES & CREAM",
+        "type": "freeze",
+        "price": "41",
+        "label": "-10%",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/COOKIES-CREAM.png"
+    },
+    {
+        "id": 18,
+        "name": "FREEZE SÔ-CÔ-LA",
+        "type": "freeze",
+        "price": "50",
+        "label": "Hot",
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/CHOCOLATE-FREEZE.png"
+    }
+]

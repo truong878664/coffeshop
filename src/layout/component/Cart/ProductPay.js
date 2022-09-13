@@ -7,8 +7,8 @@ import style from './Cart.module.scss';
 
 const cx = classNames.bind(style);
 
-function ProductPay({ image, name, size, price, quantity }) {
-    const [quantityNew, setQuantily] = useState(quantity);
+function ProductPay({ image, name, size, price }) {
+    const [quantityNew, setQuantily] = useState(1);
 
     const handleQuantilyMinus = () => {
         if (quantityNew <= 0) {

@@ -28,6 +28,7 @@
     text-align: center;
     line-height: 21px;
     box-shadow: 1px 1px 0 var(--box-color);
+    font-weight: 600;
 }
 
 .Hot {
@@ -50,6 +51,8 @@ div[class$='%'] {
 
 .img-product {
     max-height: 160px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .img-product.large {
@@ -103,11 +106,12 @@ div[class$='%'] {
     color: var(--red-color);
     width: 38px;
     margin-left: 4px;
+    position: relative;
 
     &::before {
         content: '';
         position: absolute;
-        top: 10px;
+        top: 8px;
         width: 38px;
         height: 2px;
         transform: rotate(-19deg);

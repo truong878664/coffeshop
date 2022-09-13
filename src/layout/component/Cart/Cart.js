@@ -1,7 +1,5 @@
-import { useContext } from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import { CartOderContext } from '~/Context/CartOderProvider.js';
 
 import routes from '~/config/routes';
 import style from './Cart.module.scss';
@@ -9,12 +7,14 @@ import images from '~/asscet/images';
 
 import ProductPay from './ProductPay';
 
+import { useShopingCart } from '~/Context/CartOderProvider.js';
+
 const cx = classNames.bind(style);
 
 function Cart() {
-    const CartOdervalue = useContext(CartOderContext);
-    const datas = CartOdervalue.productOder;
-    console.log(datas.length);
+    const { productOder } = useShopingCart();
+
+    const datas = productOder;
     if (datas.length) {
         return (
             <div className={cx('wrapper')}>
@@ -31,7 +31,6 @@ function Cart() {
                                   name={data.name}
                                   size={data.size}
                                   price={data.price}
-                                  quantity={data.quantity}
                               />
                           ))
                         : ''}

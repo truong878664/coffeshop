@@ -12,6 +12,25 @@
     background-color: transparent;
 }
 
+.product-item {
+    margin-top: 40px;
+}
+
+.panner {
+    width: 100%;
+    max-height: 500px;
+    line-height: 500px;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 90px;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.2;
+}
+
+.logo-image {
+    max-width: 100%;
+}
 .heading {
     font-family: var(--font-heading);
     margin-bottom: 8px;

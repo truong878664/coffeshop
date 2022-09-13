@@ -1,3 +1,5 @@
+$headercolor: rgb(249, 249, 249);
+
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -13,8 +15,8 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%);
+    background: $headercolor;
+    background: linear-gradient(180deg, rgba(249, 249, 249, 1) 60%, rgba(249, 249, 249, 0) 100%);
 }
 
 .logo {

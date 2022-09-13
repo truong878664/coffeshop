@@ -2,15 +2,18 @@ import classNames from 'classnames/bind';
 import style from './Product.module.scss';
 
 import ProductItem from '~/components/ProductItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCaretLeft, faListSquares } from '@fortawesome/free-solid-svg-icons';
+import productDatas from '~/data/product.json';
+import images from '~/asscet/images';
 
 const cx = classNames.bind(style);
 
 const MENU_ITEM = [
     {
         name: 'Cà phê',
+
         children: {
             title: 'Cà phê',
             data: [
@@ -25,6 +28,7 @@ const MENU_ITEM = [
     },
     {
         name: 'Trà',
+
         children: {
             title: 'Trà',
             data: [
@@ -60,10 +64,34 @@ function Product() {
     const datas = [{ data: MENU_ITEM }];
     const [menuItem, setMenuItem] = useState(datas);
     const currentItem = menuItem[menuItem.length - 1];
+
     const onBack = () => {
         const newMenuItem = menuItem.splice(0, menuItem.length - 1);
         setMenuItem(newMenuItem);
+        setcurrentMenuTitle('');
     };
+    const [currentMenuTitle, setcurrentMenuTitle] = useState('');
+
+    const currentProduct = productDatas.filter((data) => {
+        let currentType = '';
+        if (currentMenuTitle.indexOf('Trà', 0) !== -1) {
+            currentType = 'tea';
+        } else if (currentMenuTitle.indexOf('Cà phê', 0) !== -1) {
+            currentType = 'coffee';
+        } else if (currentMenuTitle.indexOf('FREEZE', 0) !== -1) {
+            currentType = 'freeze';
+        }
+        return data.type === currentType;
+    });
+
+    const [isShowPaner, setIsShowPaner] = useState(true);
+    useEffect(() => {
+        if (menuItem.length <= 1) {
+            setIsShowPaner(true);
+        } else {
+            setIsShowPaner(false);
+        }
+    }, [menuItem]);
 
     return (
         <div className={cx('wrapper')}>
@@ -86,14 +114,13 @@ function Product() {
                             <ul className={cx('menu')}>
                                 {currentItem.data.map((item, index) => {
                                     const isParent = !!item.children;
-
                                     return (
                                         <li
                                             key={index}
                                             className={cx('item')}
-                                            onClick={() => {
+                                            onClick={(e) => {
+                                                setcurrentMenuTitle(e.target.innerText);
                                                 if (isParent) {
-                                                    // console.log(item.children);
                                                     setMenuItem((prev) => [...prev, item.children]);
                                                 }
                                             }}
@@ -108,16 +135,17 @@ function Product() {
                     <div className={cx('col', 'l-10')}>
                         <div className={cx('product')}>
                             <div className={cx('row')}>
-                                <div className={cx('col', 'l-2-4')}>
-                                    <ProductItem
-                                        name={'Trà ổi nhiệt đới'}
-                                        price={35}
-                                        sticker="New"
-                                        src={
-                                            'https://www.highlandscoffee.com.vn/vnt_upload/product/07_2022/thumbs/270_crop_oi-hong.png'
-                                        }
-                                    />
-                                </div>
+                                {currentProduct.map((data, index) => (
+                                    <div key={index} className={cx('col', 'l-2-4', 'product-item')}>
+                                        <ProductItem
+                                            name={data.name}
+                                            price={data.price}
+                                            sticker={data.label}
+                                            src={data.src}
+                                        />
+                                    </div>
+                                ))}
+                                {isShowPaner && <div className={cx('panner')}>See Tea.</div>}
                             </div>
                         </div>
                     </div>

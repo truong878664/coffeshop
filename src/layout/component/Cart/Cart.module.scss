@@ -50,7 +50,7 @@
     z-index: 1000;
     background-color: var(--white-color);
     &:hover {
-        animation: jump infinite ease-in 3s;
+        animation: jump 1 ease-in 0.3s;
     }
     &:hover > .note {
         display: block;
@@ -63,23 +63,9 @@
         animation-timing-function: ease-in;
     }
     50% {
-        bottom: 70px;
+        bottom: 40px;
         animation-timing-function: ease-out;
     }
-    55% {
-        bottom: 30px;
-        animation-timing-function: ease-in;
-    }
-
-    65% {
-        bottom: 60px;
-        animation-timing-function: ease-out;
-    }
-    95% {
-        bottom: 30px;
-        animation-timing-function: ease-in;
-    }
-
     100% {
         bottom: 30px;
         animation-timing-function: ease-in;

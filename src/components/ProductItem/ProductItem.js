@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 
 import { CartOderContext } from '~/Context/CartOderProvider.js';
+import { getParent } from '~/components/function/function.js';
 
 const cx = classNames.bind(style);
 
@@ -13,20 +14,9 @@ function Product({ sticker, StickerPosition, large, src, name, price }) {
     const RandomRolate = () => Math.floor(Math.random() * 30 - 10);
     const RandomTranlatex = () => Math.floor(Math.random() * 20 + 10);
     const isDiscount = !isNaN(Number.parseInt(sticker));
-    const classes = cx('wrapper','product-item', { large });
+    const classes = cx('wrapper', 'product-item', { large });
 
     const setProductOderValue = useContext(CartOderContext);
-
-    const getParent = (child, classParent) => {
-        let parent = child.parentElement;
-        while (parent) {
-            if (parent.classList.contains(classParent)) {
-                break;
-            }
-            parent = parent.parentElement;
-        }
-        return parent;
-    };
 
     const handleOrder = (e) => {
         const parent = getParent(e.target, 'product-item');
