@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white-color);
+  width: 30%;
+  height: 60px;
+  border: 2px solid var(--box-color);
+  box-shadow: 3px 3px 0 var(--box-color);
+  border-radius: 16px;
+  color: var(--text-color-opacity);
+}
+
+.span {
+  display: none;
+  font-size: 16px;
+}
+
+.active .span {
+  display: block;
+}/*# sourceMappingURL=Dock.module.css.map */

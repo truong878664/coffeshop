@@ -1,43 +1,31 @@
-import { useContext } from 'react';
 import classNames from 'classnames/bind';
 import style from './ProductItem.module.scss';
 import { discount } from '~/components/function/function.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 
-import { CartOderContext } from '~/Context/CartOderProvider.js';
-import { getParent } from '~/components/function/function.js';
+import { useShopingCart } from '~/Context/CartOderProvider.js';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const cx = classNames.bind(style);
 
-function Product({ sticker, StickerPosition, large, src, name, price }) {
+function Product({ sticker, StickerPosition, large, src, name, price, id }) {
     const RandomRolate = () => Math.floor(Math.random() * 30 - 10);
     const RandomTranlatex = () => Math.floor(Math.random() * 20 + 10);
     const isDiscount = !isNaN(Number.parseInt(sticker));
     const classes = cx('wrapper', 'product-item', { large });
 
-    const setProductOderValue = useContext(CartOderContext);
+    const { setCartItemQuantity } = useShopingCart();
 
     const handleOrder = (e) => {
-        const parent = getParent(e.target, 'product-item');
-        const image = parent.querySelector('img').src;
-        const name = parent.querySelector('.name').innerText;
-        const size = e.target.innerText;
-        const quantity = 1;
-        const price = parent.querySelector('.price-oder').innerText;
-
-        const itemOder = {
-            image,
-            name,
-            size,
-            quantity,
-            price,
-        };
-
-        setProductOderValue.setProductOder((prev) => [...prev, itemOder]);
+        setCartItemQuantity(id, e.target.innerText);
+        e.stopPropagation();
     };
+
+    const navigate = useNavigate();
+
     return (
-        <div className={classes}>
+        <div onClick={() => navigate(`/product/${id}`)} className={classes}>
             <div className={cx('sticker', StickerPosition, sticker)}>{sticker}</div>
             <img
                 className={cx('img-product', { large })}
@@ -60,8 +48,16 @@ function Product({ sticker, StickerPosition, large, src, name, price }) {
                     </div>
                 </div>
                 <div>
-                    {isDiscount && <p className={cx('price')}>{price} $</p>}
-                    <div className={cx('new-price', 'price-oder')}>{discount(sticker, price)} $</div>
+                    {isDiscount && (
+                        <p className={cx('price')}>
+                            {price}
+                            <span className={cx('unit')}>k</span>
+                        </p>
+                    )}
+                    <div className={cx('new-price', 'price-oder')}>
+                        {discount(sticker, price)}
+                        <span className={cx('unit')}>k</span>
+                    </div>
                 </div>
             </div>
         </div>

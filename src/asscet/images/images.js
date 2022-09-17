@@ -1,6 +1,7 @@
 const images = {
     cart: require('~/asscet/images/cart.png'),
-    imagePaner: require('~/asscet/images/Coworking.png'),
+    coffeeNut: require('~/asscet/images/cfnut.png'),
+    logoStb: require('~/asscet/images/stb.png'),
 };
 
 export default images;

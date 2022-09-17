@@ -5,17 +5,22 @@ import routes from '~/config/routes';
 import style from './Cart.module.scss';
 import images from '~/asscet/images';
 
-import ProductPay from './ProductPay';
+import ProductPay from '../../../components/ProductPay/ProductPay';
 
 import { useShopingCart } from '~/Context/CartOderProvider.js';
+import productDatas from '~/data/product.json';
 
 const cx = classNames.bind(style);
 
 function Cart() {
-    const { productOder } = useShopingCart();
+    const { cartItems } = useShopingCart();
 
-    const datas = productOder;
-    if (datas.length) {
+    const totalPriceCart = cartItems.reduce((total, item) => {
+        const dataPrice = productDatas.find((data) => data.id === item.id);
+        return total + dataPrice.price * item.quantity;
+    }, 0);
+
+    if (cartItems.length) {
         return (
             <div className={cx('wrapper')}>
                 <div className={cx('header')}>
@@ -23,17 +28,21 @@ function Cart() {
                     <p className={cx('heading')}>Giỏ hàng</p>
                 </div>
                 <div className={cx('content')}>
-                    {datas
-                        ? datas.map((data, index) => (
-                              <ProductPay
-                                  key={index}
-                                  image={data.image}
-                                  name={data.name}
-                                  size={data.size}
-                                  price={data.price}
-                              />
-                          ))
-                        : ''}
+                    {cartItems.map((item, index) => {
+                        const data = productDatas.find((data) => data.id === item.id);
+                        return (
+                            <ProductPay
+                                key={index}
+                                name={data.name}
+                                size={item.size}
+                                price={data.price}
+                                image={data.src}
+                                quantity={item.quantity}
+                                id={data.id}
+                                label={data.label}
+                            />
+                        );
+                    })}
                 </div>
                 <div className={cx('footer')}>
                     <Link to={routes.pay} className={cx('pay-btn')}>
@@ -42,11 +51,8 @@ function Cart() {
                     <div className={cx('total')}>
                         <p className={cx('label')}>Tổng:</p>
                         <p>
-                            {datas.reduce((total, data) => {
-                                const price = Number.parseInt(data.price);
-                                return total + price;
-                            }, 0)}
-                            <span> $</span>
+                            {totalPriceCart}
+                            <span className={cx('unit')}>k</span>
                         </p>
                     </div>
                 </div>

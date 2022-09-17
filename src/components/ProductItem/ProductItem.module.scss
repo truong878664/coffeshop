@@ -9,6 +9,7 @@
     // width: 100%;
     margin-bottom: 16px;
     margin: 0 8px;
+    display: block;
 }
 
 .wrapper.large {
@@ -85,6 +86,15 @@ div[class$='%'] {
     }
 }
 
+.name {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .order-btn {
     position: absolute;
     font-size: 28px;
@@ -125,6 +135,15 @@ div[class$='%'] {
     margin-left: 4px;
 }
 
+.unit {
+    font-size: 12px;
+    position: relative;
+    &::after {
+        content: 'đ';
+        position: absolute;
+        right: -10px;
+    }
+}
 // size order
 
 .wrapper-size {
@@ -138,6 +157,11 @@ div[class$='%'] {
     padding: 4px;
     padding-left: 20px;
     animation: feadin ease-in 0.4s;
+    z-index: 1000;
+
+    p {
+        user-select: none;
+    }
 
     &:hover {
         display: block;

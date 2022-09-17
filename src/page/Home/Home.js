@@ -45,13 +45,25 @@ function Home() {
                     if (index === 0) {
                         return (
                             <div key={data.id} className={cx('col', 'l-2', 'l-o-2')}>
-                                <ProductItem name={data.name} price={data.price} sticker={data.label} src={data.src} />
+                                <ProductItem
+                                    name={data.name}
+                                    price={data.price}
+                                    sticker={data.label}
+                                    src={data.src}
+                                    id={data.id}
+                                />
                             </div>
                         );
                     } else {
                         return (
                             <div key={data.id} className={cx('col', 'l-2')}>
-                                <ProductItem name={data.name} price={data.price} sticker={data.label} src={data.src} />
+                                <ProductItem
+                                    name={data.name}
+                                    price={data.price}
+                                    sticker={data.label}
+                                    src={data.src}
+                                    id={data.id}
+                                />
                             </div>
                         );
                     }
@@ -75,6 +87,7 @@ function Home() {
                                     StickerPosition="right"
                                     large
                                     src={data.src}
+                                    id={data.id}
                                 />
                             </div>
                         );
@@ -86,6 +99,7 @@ function Home() {
                                     price={data.price}
                                     sticker={data.label}
                                     large
+                                    id={data.id}
                                     src={data.src}
                                 />
                             </div>
@@ -111,6 +125,7 @@ function Home() {
                                     StickerPosition="right"
                                     large
                                     src={data.src}
+                                    id={data.id}
                                 />
                             </div>
                         );
@@ -123,31 +138,12 @@ function Home() {
                                     sticker={data.label}
                                     large
                                     src={data.src}
+                                    id={data.id}
                                 />
                             </div>
                         );
                     }
                 })}
-
-                {/* <div className={cx('col', 'l-4')}>
-                    <ProductItem
-                        name={'Trà thạch vải'}
-                        StickerPosition="right"
-                        price={35}
-                        sticker="-12%"
-                        large
-                        src={'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRATHACHDAO.png'}
-                    />
-                </div>
-                <div className={cx('col', 'l-2')}>
-                    <ProductItem
-                        name={'Trà thạch đào'}
-                        price={35}
-                        sticker="-15%"
-                        large
-                        src={'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRATHACHDAO.png'}
-                    />
-                </div> */}
             </div>
         </div>
     );

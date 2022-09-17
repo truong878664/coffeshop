@@ -1,0 +1,221 @@
+@charset "UTF-8";
+.wrapper {
+  border: 2px solid var(--box-color);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 3px 3px 0 var(--box-color);
+  height: 160px;
+  position: relative;
+  margin-bottom: 16px;
+  margin: 0 8px;
+}
+
+.wrapper.large {
+  height: 200px;
+}
+
+.sticker {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 26px;
+  border-radius: 999px;
+  border: 2px solid var(--box-color);
+  background-color: #96e5d1;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 21px;
+  box-shadow: 1px 1px 0 var(--box-color);
+  font-weight: 600;
+}
+
+.Hot {
+  background-color: #eb1d36;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+div[class$="%"] {
+  font-weight: 600;
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+
+.sticker.right {
+  position: absolute;
+  top: 10px;
+  left: calc(100% - 100px - 20px);
+  width: 100px;
+}
+
+.img-product {
+  max-height: 160px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.img-product.large {
+  max-height: 200px;
+}
+
+.info-item {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 2px solid var(--box-color);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  font-weight: 600;
+  background-color: #fff;
+  cursor: pointer;
+}
+.info-item:hover {
+  background-color: var(--background-color);
+}
+.info-item:hover .order-btn {
+  display: block;
+}
+
+.name {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-btn {
+  position: absolute;
+  font-size: 28px;
+  color: var(--red-color);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: var(--background-color);
+  display: none;
+  transition: opacity;
+  -webkit-animation: feadin ease-in 0.2s;
+          animation: feadin ease-in 0.2s;
+}
+.order-btn:hover ~ .wrapper-size {
+  display: block;
+}
+
+.price {
+  font-family: var(--font-heading);
+  color: var(--red-color);
+  width: 38px;
+  margin-left: 4px;
+  position: relative;
+}
+.price::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 38px;
+  height: 2px;
+  transform: rotate(-19deg);
+  background-color: var(--red-color);
+}
+
+.new-price {
+  font-family: var(--font-heading);
+  width: 38px;
+  margin-left: 4px;
+}
+
+.unit {
+  font-size: 12px;
+  position: relative;
+}
+.unit::after {
+  content: "đ";
+  position: absolute;
+  right: -10px;
+}
+
+.wrapper-size {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  border-radius: 8px;
+  padding: 4px;
+  padding-left: 20px;
+  -webkit-animation: feadin ease-in 0.4s;
+          animation: feadin ease-in 0.4s;
+  z-index: 1000;
+}
+.wrapper-size p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.wrapper-size:hover {
+  display: block;
+}
+
+.wrapper-size p {
+  font-size: 14px;
+  border: 2px solid var(--box-color);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 4px;
+  box-shadow: 1.6px 1.6px 0 var(--box-color);
+  background-color: var(--background-color);
+  margin-bottom: 4px;
+  transition: width ease 0.2s;
+  transform-origin: 50% 50%;
+}
+.wrapper-size p:hover {
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .sticker {
+    position: absolute;
+    top: 10px;
+    left: 80%;
+  }
+}
+@media (max-width: 740px) {
+  .sticker {
+    position: absolute;
+    top: 10px;
+    left: calc(100% - 100px - 20px);
+    width: 100px;
+  }
+}
+@-webkit-keyframes feadin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes feadin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=ProductItem.module.css.map */

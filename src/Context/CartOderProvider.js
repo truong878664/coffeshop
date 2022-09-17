@@ -7,21 +7,60 @@ export function useShopingCart() {
 }
 
 function CartOderProvider({ children }) {
-    const [productOder, setProductOder] = useState([]);
-
     const [cartItems, setCartItems] = useState([]);
     useEffect(() => {
         console.log(cartItems);
     }, [cartItems]);
 
-    const setCartItemQuanity = (id, size) => {
-        if (cartItems.find((item) => item.id !== id)) {
+    const setCartItemQuantity = (id, size) => {
+        if (cartItems.find((item) => item.id === id && item.size === size) === undefined) {
             setCartItems((prev) => [...prev, { id, quantity: 1, size }]);
+        } else {
+            increseItemQuantity(id, size);
         }
     };
 
+    const increseItemQuantity = (id, size = '') => {
+        setCartItems((prev) => {
+            return prev.map((item) => {
+                if (item.size === size && item.id === id) {
+                    return { ...item, quantity: item.quantity + 1 };
+                } else {
+                    return item;
+                }
+            });
+        });
+    };
+
+    const decreseItemQuantity = (id, size) => {
+        setCartItems((prev) => {
+            return prev.map((item) => {
+                if (item.id === id && item.size === size) {
+                    const newItem = { ...item, quantity: item.quantity - 1 };
+                    if (newItem.quantity <= 0) {
+                        return { ...item, quantity: 0 };
+                    } else {
+                        return newItem;
+                    }
+                } else {
+                    return item;
+                }
+            });
+        });
+    };
+
+    const removeItemQuantity = (id, size) => {
+        const itemRemove = cartItems.find((item) => {
+            return item.id === id && item.size === size;
+        });
+        const newCartItems = cartItems.filter((item) => item !== itemRemove);
+        setCartItems(newCartItems);
+    };
+
     return (
-        <CartOderContext.Provider value={{ productOder, setProductOder, setCartItemQuanity }}>
+        <CartOderContext.Provider
+            value={{ cartItems, setCartItemQuantity, increseItemQuantity, decreseItemQuantity, removeItemQuantity }}
+        >
             {children}
         </CartOderContext.Provider>
     );

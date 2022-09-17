@@ -3,149 +3,185 @@
         "id": 1,
         "name": "Trà ổi nhiệt đới",
         "type": "tea",
-        "price": "35",
+        "price": 35,
         "label": "New",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/07_2022/thumbs/270_crop_oi-hong.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/07_2022/oi-hong.png",
+        "color": "#8c9839",
+        "describe": "Sự kết hợp thú vị giữa chất thanh mát từ trà xanh lài cùng hương thơm nhẹ nhàng và vị chua ngọt của ổi hồng sẽ mang tới một trải nghiệm tuyệt vời!"
     },
     {
         "id": 2,
         "name": "Trà sen vàng",
         "type": "tea",
-        "price": "45",
+        "price": 45,
         "label": "New",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/07_2022/tra-sen-vang.png",
+        "color": "#e2bd74",
+        "describe": "Thức uống chinh phục những thực khách khó tính! Sự kết hợp độc đáo giữa trà Ô long, hạt sen thơm bùi và củ năng giòn tan. Thêm vào chút sữa sẽ để vị thêm ngọt ngào."
     },
     {
         "id": 3,
         "name": "Trà xanh đậu đỏ",
         "type": "tea",
-        "price": "35",
+        "price": 35,
         "label": "New",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRAXANHDAUDO.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRAXANHDAUDO.png",
+        "color": "#8c9839",
+        "describe": "Thức uống chinh phục những thực khách khó tính! Sự kết hợp độc đáo giữa trà Ô long, hạt sen thơm bùi và củ năng giòn tan. Thêm vào chút sữa sẽ để vị thêm ngọt ngào."
     },
 
     {
         "id": 4,
         "name": "Trà thạch vải",
         "type": "tea",
-        "price": "39",
+        "price": 39,
         "label": "New",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png",
+        "color": "#be6340",
+        "describe": "Một sự kết hợp thú vị giữa trà đen, những quả vải thơm ngon và thạch giòn khó cưỡng, mang đến thức uống tuyệt hảo!"
     },
 
     {
         "id": 5,
         "name": "Trà thanh đào",
         "type": "tea",
-        "price": "42",
+        "price": 42,
         "label": "Hot",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png",
+        "color": "#be6340",
+        "describe": "Vị trà đậm đà kết hợp cùng những miếng đào thơm ngon mọng nước cùng thạch đào giòn dai. Thêm vào ít sữa để gia tăng vị béo."
     },
     {
         "id": 6,
         "name": "CARAMEL PHIN FREEZE",
         "type": "freeze",
-        "price": "35",
+        "price": 35,
         "label": "Hot",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png",
+        "color": "#aa7d48",
+        "describe": "Thơm ngon khó cưỡng! Được kết hợp từ cà phê truyền thống chỉ có tại Highlands Coffee, cùng với caramel, thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và caramel ngọt ngào. Món nước phù hợp trong những cuộc gặp gỡ bạn bè, bởi sự ngọt ngào thường mang mọi người xích lại gần nhau."
     },
 
     {
         "id": 7,
         "name": "Bạc sỉu đá",
         "type": "coffee",
-        "price": "35",
+        "price": 35,
         "label": "Hot",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png",
+        "color": "#aa7d48",
+        "describe": "Nếu Phin Sữa Đá dành cho các bạn đam mê vị đậm đà, thì Bạc Xỉu Đá là một sự lựa chọn nhẹ đô cà phê nhưng vẫn thơm ngon, chất lừ không kém!"
     },
 
     {
         "id": 8,
         "name": "PHIN SỮA ĐÁ",
         "type": "coffee",
-        "price": "35",
+        "price": 35,
         "label": "-25%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/PHIN-SUA-DA.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/PHIN-SUA-DA.png",
+        "color": "#aa7d48",
+        "describe": "Hương vị cà phê Việt Nam đích thực! Từng hạt cà phê hảo hạng được chọn bằng tay, phối trộn độc đáo giữa hạt Robusta từ cao nguyên Việt Nam, thêm Arabica thơm lừng. Cà phê được pha từ Phin truyền thống, hoà cùng sữa đặc sánh và thêm vào chút đá tạo nên ly Phin Sữa Đá – Đậm Đà Chất Phin."
     },
 
     {
         "id": 9,
         "name": "Trà thạch vải",
         "type": "tea",
-        "price": "35",
+        "price": 35,
         "label": "-12%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png",
+        "color": "#c69171",
+        "describe": "Một sự kết hợp thú vị giữa trà đen, những quả vải thơm ngon và thạch giòn khó cưỡng, mang đến thức uống tuyệt hảo!"
     },
     {
         "id": 10,
         "name": "Trà thạch đào",
         "type": "tea",
-        "price": "35",
+        "price": 35,
         "label": "-15%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRATHACHDAO.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRATHACHDAO.png",
+        "color": "#9c2b20",
+        "describe": "Vị trà đậm đà kết hợp cùng những miếng đào thơm ngon mọng nước cùng thạch đào giòn dai. Thêm vào ít sữa để gia tăng vị béo."
     },
     {
         "id": 11,
         "name": "Trà trái cây",
         "type": "tea",
-        "price": "40",
+        "price": 40,
         "label": "New",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRAXANHDAUDO.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRAXANHDAUDO.png",
+        "color": "#b7d18a",
+        "describe": "Một sự kết hợp thú vị giữa trà đen, những quả vải thơm ngon và thạch giòn khó cưỡng, mang đến thức uống tuyệt hảo!"
     },
     {
         "id": 12,
         "name": "Trà vải nhiệt đới",
         "type": "tea",
-        "price": "42",
+        "price": 42,
         "label": "-10%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png",
+        "color": "#c26445",
+        "describe": "Một sự kết hợp thú vị giữa trà đen, những quả vải thơm ngon và thạch giòn khó cưỡng, mang đến thức uống tuyệt hảo!"
     },
     {
         "id": 13,
         "name": "Trà đào cam sả",
         "type": "tea",
-        "price": "30",
+        "price": 30,
         "label": "-30%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/TRATHACHVAI_1.png",
+        "color": "#e37924",
+        "describe": "Một trải nghiệm thú vị khác! Sự hài hòa giữa vị trà cao cấp, vị sả thanh mát và những miếng đào thơm ngon mọng nước sẽ mang đến cho bạn một thức uống tuyệt vời."
     },
     {
         "id": 14,
         "name": "Cà phê campuchino",
         "type": "coffee",
-        "price": "25",
+        "price": 25,
         "label": "Hot",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png",
+        "color": "#a77c46",
+        "describe": "Thơm ngon khó cưỡng! Được kết hợp từ cà phê truyền thống chỉ có tại Highlands Coffee, cùng với caramel, thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và caramel ngọt ngào. Món nước phù hợp trong những cuộc gặp gỡ bạn bè, bởi sự ngọt ngào thường mang mọi người xích lại gần nhau."
     },
     {
         "id": 15,
         "name": "Cà phê đen không đường",
         "type": "coffee",
-        "price": "30",
+        "price": 30,
         "label": "-15%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/Bac_Xiu_Da.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/CFD.png",
+        "color": "#a77c46",
+        "describe": "Dành cho những tín đồ cà phê đích thực! Hương vị cà phê truyền thống được phối trộn độc đáo tại Highlands. Cà phê đậm đà pha hoàn toàn từ Phin, cho thêm 1 thìa đường, một ít đá viên mát lạnh, tạo nên Phin Đen Đá mang vị cà phê đậm đà chất Phin. "
     },
     {
         "id": 16,
         "name": "FREEZE TRÀ XANH",
         "type": "freeze",
-        "price": "42",
+        "price": 42,
         "label": "-25%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_GTF.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/GTF.png",
+        "color": "#abb34f",
+        "describe": "Thơm ngon đậm đà! Được kết hợp từ cà phê pha Phin truyền thống chỉ có tại Highlands Coffee, cùng với thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và bột ca cao đậm đà. Món nước hoàn hảo để khởi đầu câu chuyện cùng bạn bè."
     },
     {
         "id": 17,
         "name": "COOKIES & CREAM",
         "type": "freeze",
-        "price": "41",
+        "price": 41,
         "label": "-10%",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/COOKIES-CREAM.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/COOKIES-CREAM.png",
+        "color": "#7d6859",
+        "describe": "Một thức uống ngon lạ miệng bởi sự kết hợp hoàn hảo giữa cookies sô cô la giòn xốp cùng hỗn hợp sữa tươi cùng sữa đặc đem say với đá viên, và cuối cùng không thể thiếu được chính là lớp kem whip mềm mịn cùng cookies sô cô la say nhuyễn."
     },
     {
         "id": 18,
         "name": "FREEZE SÔ-CÔ-LA",
         "type": "freeze",
-        "price": "50",
+        "price": 50,
         "label": "Hot",
-        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/CHOCOLATE-FREEZE.png"
+        "src": "https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/CHOCOLATE-FREEZE.png",
+        "color": "#733e2c",
+        "describe": "Thiên đường đá xay sô cô la! Từ những thanh sô cô la Việt Nam chất lượng được đem xay với đá cho đến khi mềm mịn, sau đó thêm vào thạch sô cô la dai giòn, ở trên được phủ một lớp kem whip beo béo và sốt sô cô la ngọt ngào. Tạo thành Freeze Sô-cô-la ngon mê mẩn chinh phục bất kì ai!"
     }
 ]

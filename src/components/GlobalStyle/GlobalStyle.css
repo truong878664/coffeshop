@@ -1,0 +1,60 @@
+@import 'normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Work+Sans:wght@300;400&display=swap");
+:root {
+  --font-heading: "Bevan", cursive;
+  --font-text: "Work Sans", sans-serif;
+  --white-color: #fff;
+  --black-color: #000;
+  --primary-color: #ccc;
+  --text-color: #0f3460;
+  --text-color-opacity: rgba(15, 52, 96, 0.7);
+  --box-color: #16213e;
+  --background-color: #fff5e4;
+  --red-color: #c21010;
+  --yellow-color: #ffb200;
+  --btn-hover-color: #ffeeaf;
+}
+
+html {
+  font-family: var(--font-text);
+  color: var(--text-color);
+}
+
+body {
+  overflow-y: overlay;
+  overflow-x: overlay;
+  background-color: #f9f9f9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.3);
+}/*# sourceMappingURL=GlobalStyle.css.map */

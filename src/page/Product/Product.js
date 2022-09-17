@@ -6,10 +6,9 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft, faListSquares } from '@fortawesome/free-solid-svg-icons';
 import productDatas from '~/data/product.json';
-import images from '~/asscet/images';
+import ProductPay from '~/components/ProductPay/ProductPay';
 
 const cx = classNames.bind(style);
-
 const MENU_ITEM = [
     {
         name: 'Cà phê',
@@ -56,15 +55,15 @@ const MENU_ITEM = [
         },
     },
 ];
+const datas = [{ data: MENU_ITEM }];
 
 function Product() {
+    //title page
     const titleElement = document.querySelector('title');
     titleElement.innerText = 'See Tea | Sản phẩm';
 
-    const datas = [{ data: MENU_ITEM }];
     const [menuItem, setMenuItem] = useState(datas);
     const currentItem = menuItem[menuItem.length - 1];
-
     const onBack = () => {
         const newMenuItem = menuItem.splice(0, menuItem.length - 1);
         setMenuItem(newMenuItem);
@@ -142,6 +141,7 @@ function Product() {
                                             price={data.price}
                                             sticker={data.label}
                                             src={data.src}
+                                            id={data.id}
                                         />
                                     </div>
                                 ))}
