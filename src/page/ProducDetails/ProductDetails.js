@@ -25,7 +25,7 @@ function ProductDetails() {
         if (size) {
             setCartItemQuantity(currentItem.id, size);
         } else {
-            alert('vui long ');
+            alert('Vui lòng chọn size bạn muốn! ');
         }
     };
 
