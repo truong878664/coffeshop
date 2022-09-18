@@ -71,6 +71,23 @@
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     font-weight: 800;
+    display: flex;
+}
+
+.icon {
+    // position: absolute;
+    // top: -5px;
+    // right: -5px;
+    padding: 0 4px;
+}
+.icon-sale {
+    color: #f76e11;
+}
+.icon-new {
+    color: var(--yellow-color);
+}
+.icon-hot {
+    color: #ff1818;
 }
 
 .name {

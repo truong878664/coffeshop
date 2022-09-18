@@ -90,7 +90,8 @@ function Pay() {
                         <p className={cx('illegal')}>
                             Mã khuyến mãi không hợp lệ do sai cú pháp hoặc quá thời hạn áp dụng. bạn hãy thử nhập mã là
                             "CMT81975", Với điều kiện mua trên 3 sản phẩm, tổng đơn hàng trên 100.000 đ. Và bạn được
-                            giảm luôn 20%
+                            giảm luôn 20%.
+                            <br /> Hoặc là nhập "EMYEUANH" để giảm 99%.
                         </p>
                     )}
                 </div>

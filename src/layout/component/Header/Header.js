@@ -1,28 +1,27 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
 import classNames from 'classnames/bind';
 import style from './Header.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 import { handleGreeting } from '~/components/function/handle';
+import Search from './Search/Search.js';
 
 const cx = classNames.bind(style);
 
+// console.log(searchProduct(productDatas, 'tra dao'));
+
 function Header() {
+    const homeNavigate = useNavigate();
     return (
         <div className={cx('wrapper')}>
             <div className={cx('grid', 'wide', 'container')}>
                 <div className={cx('row', 'row-space')}>
                     <div className={cx('col', 'l-2', 'm-3', 'c-6')}>
-                        <div className={cx('logo')}>See Tea.</div>
+                        <div className={cx('logo')} onClick={() => homeNavigate('/')}>
+                            See Tea.
+                        </div>
                     </div>
                     <div className={cx('col', 'l-3', 'm-4', 'c-0')}>
-                        <div className={cx('search')}>
-                            <input placeholder="Search" className={cx('search-input')} />
-                            <div className={cx('search-btn')}>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                            </div>
-                        </div>
+                        <Search />
                     </div>
                     <div className={cx('col', 'l-3', 'm-4', 'c-6')}>
                         <div className={cx('profile')}>

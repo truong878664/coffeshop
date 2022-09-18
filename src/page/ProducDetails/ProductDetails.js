@@ -66,7 +66,7 @@ function ProductDetails() {
                             handleSetItemQuantity(currentItem.id, size);
                         }}
                     >
-                        Thêm vào giỏ hàng
+                        ADD TO CART +
                     </button>
                 </div>
             </div>

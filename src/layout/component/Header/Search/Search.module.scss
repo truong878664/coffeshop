@@ -1,0 +1,135 @@
+//search
+.search {
+    max-width: 300px;
+    // min-width: 250px;
+    height: 35px;
+    border: 2px solid var(--box-color);
+    background-color: var(--background-color);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 3px 0 var(--box-color);
+    position: relative;
+}
+
+.search-input {
+    height: 100%;
+    flex: 1;
+    padding-left: 16px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.search-btn {
+    height: 100%;
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotate {
+    position: relative;
+
+    animation: rotate infinite ease-in-out 2s;
+}
+.search-value {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 270px;
+    background-color: #fff;
+    // height: 200px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--box-color);
+    box-shadow: 4px 4px 0 var(--box-color);
+    .heading {
+        padding: 14px;
+    }
+    .icon {
+        padding-left: 8px;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: -1000;
+    }
+    .content {
+        max-height: 300px;
+        overflow: hidden;
+        overflow-y: overlay;
+        p {
+            font-size: 12px;
+            padding: 0 16px;
+        }
+    }
+}
+
+//search product item
+
+.wrapper {
+    display: flex;
+    padding: 4px 8px;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--background-color);
+    }
+
+    .image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--background-color);
+    }
+    .info {
+        padding: 0 10px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        left: 3px;
+        top: 0px;
+    }
+    18% {
+        left: 2px;
+        top: 2px;
+    }
+    25% {
+        left: 0px;
+        top: 3px;
+    }
+    37% {
+        left: -2px;
+        top: 2px;
+    }
+    56% {
+        left: -3px;
+        top: 0px;
+    }
+    62% {
+        left: -2px;
+        top: -2px;
+    }
+    79% {
+        left: 0px;
+        top: -3px;
+    }
+    87% {
+        left: 2px;
+        top: -2px;
+    }
+    100% {
+        left: 3px;
+        top: 0px;
+    }
+}

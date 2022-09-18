@@ -9,14 +9,14 @@ import ProductPay from '../../../components/ProductPay/ProductPay';
 
 import { useShopingCart } from '~/Context/CartOderProvider.js';
 import productDatas from '~/data/product.json';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(style);
 
 function Cart() {
-    const { cartItems } = useShopingCart();
+    const { cartItems, totalQuantity } = useShopingCart();
 
     const totalPriceCart = cartItems.reduce((total, item) => {
         const dataPrice = productDatas.find((data) => data.id === item.id);
@@ -24,13 +24,6 @@ function Cart() {
     }, 0);
 
     const [isShowCart, setIsShowCart] = useState(false);
-    // useEffect(() => {
-    //     if (cartItems.length > 0) {
-    //         setIsShowCart(true);
-    //     } else {
-    //         setIsShowCart(false);
-    //     }
-    // }, [cartItems.length]);
 
     return (
         <>
@@ -40,7 +33,7 @@ function Cart() {
                         <div className={cx('cart-logo')}>
                             <img className={cx('image')} src={images.cart} alt="" />
                             <div className={cx('total-quantity')}>
-                                <p>{cartItems.length}</p>
+                                <p>{totalQuantity}</p>
                             </div>
                         </div>
                         <p className={cx('heading')}>Giỏ hàng</p>
@@ -71,13 +64,13 @@ function Cart() {
                     </div>
                     <div className={cx('footer')}>
                         <Link to={routes.pay} className={cx('pay-btn')}>
-                            Đặt mua ngay
+                            Đặt hàng
                         </Link>
                         <div className={cx('total')}>
                             <p className={cx('label')}>Tổng:</p>
                             <p>
-                                {totalPriceCart}
-                                <span className={cx('unit')}>k</span>
+                                {(totalPriceCart * 1000).toLocaleString()}
+                                <span> đ</span>
                             </p>
                         </div>
                     </div>
@@ -91,7 +84,7 @@ function Cart() {
                 >
                     <img className={cx('image-empty')} src={images.cart} alt="" />
                     <div className={cx('total-quantity')}>
-                        <p>{cartItems.length}</p>
+                        <p>{totalQuantity}</p>
                     </div>
                 </div>
             )}

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 export const CartOderContext = createContext();
 
@@ -8,9 +8,8 @@ export function useShopingCart() {
 
 function CartOderProvider({ children }) {
     const [cartItems, setCartItems] = useState([]);
-    useEffect(() => {
-        console.log(cartItems);
-    }, [cartItems]);
+
+    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     const setCartItemQuantity = (id, size) => {
         if (cartItems.find((item) => item.id === id && item.size === size) === undefined) {
@@ -59,7 +58,14 @@ function CartOderProvider({ children }) {
 
     return (
         <CartOderContext.Provider
-            value={{ cartItems, setCartItemQuantity, increseItemQuantity, decreseItemQuantity, removeItemQuantity }}
+            value={{
+                cartItems,
+                setCartItemQuantity,
+                increseItemQuantity,
+                decreseItemQuantity,
+                removeItemQuantity,
+                totalQuantity,
+            }}
         >
             {children}
         </CartOderContext.Provider>
