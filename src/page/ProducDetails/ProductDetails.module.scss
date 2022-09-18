@@ -80,6 +80,13 @@
     color: #fff;
     margin-right: 32px;
     border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(95%);
+    }
+    &:active {
+        filter: brightness(90%);
+    }
 }
 
 //image

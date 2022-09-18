@@ -9,6 +9,9 @@ import ProductPay from '../../../components/ProductPay/ProductPay';
 
 import { useShopingCart } from '~/Context/CartOderProvider.js';
 import productDatas from '~/data/product.json';
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(style);
 
@@ -20,52 +23,80 @@ function Cart() {
         return total + dataPrice.price * item.quantity;
     }, 0);
 
-    if (cartItems.length) {
-        return (
-            <div className={cx('wrapper')}>
-                <div className={cx('header')}>
-                    <img className={cx('image')} src={images.cart} alt="" />
-                    <p className={cx('heading')}>Giỏ hàng</p>
-                </div>
-                <div className={cx('content')}>
-                    {cartItems.map((item, index) => {
-                        const data = productDatas.find((data) => data.id === item.id);
-                        return (
-                            <ProductPay
-                                key={index}
-                                name={data.name}
-                                size={item.size}
-                                price={data.price}
-                                image={data.src}
-                                quantity={item.quantity}
-                                id={data.id}
-                                label={data.label}
-                            />
-                        );
-                    })}
-                </div>
-                <div className={cx('footer')}>
-                    <Link to={routes.pay} className={cx('pay-btn')}>
-                        Đặt mua ngay
-                    </Link>
-                    <div className={cx('total')}>
-                        <p className={cx('label')}>Tổng:</p>
-                        <p>
-                            {totalPriceCart}
-                            <span className={cx('unit')}>k</span>
-                        </p>
+    const [isShowCart, setIsShowCart] = useState(false);
+    // useEffect(() => {
+    //     if (cartItems.length > 0) {
+    //         setIsShowCart(true);
+    //     } else {
+    //         setIsShowCart(false);
+    //     }
+    // }, [cartItems.length]);
+
+    return (
+        <>
+            {isShowCart ? (
+                <div className={cx('wrapper', 'hide')}>
+                    <div className={cx('header')}>
+                        <div className={cx('cart-logo')}>
+                            <img className={cx('image')} src={images.cart} alt="" />
+                            <div className={cx('total-quantity')}>
+                                <p>{cartItems.length}</p>
+                            </div>
+                        </div>
+                        <p className={cx('heading')}>Giỏ hàng</p>
+                        <FontAwesomeIcon
+                            icon={faSquareXmark}
+                            className={cx('hide-btn')}
+                            onClick={() => {
+                                setIsShowCart(false);
+                            }}
+                        ></FontAwesomeIcon>
+                    </div>
+                    <div className={cx('content')}>
+                        {cartItems.map((item, index) => {
+                            const data = productDatas.find((data) => data.id === item.id);
+                            return (
+                                <ProductPay
+                                    key={index}
+                                    name={data.name}
+                                    size={item.size}
+                                    price={data.price}
+                                    image={data.src}
+                                    quantity={item.quantity}
+                                    id={data.id}
+                                    label={data.label}
+                                />
+                            );
+                        })}
+                    </div>
+                    <div className={cx('footer')}>
+                        <Link to={routes.pay} className={cx('pay-btn')}>
+                            Đặt mua ngay
+                        </Link>
+                        <div className={cx('total')}>
+                            <p className={cx('label')}>Tổng:</p>
+                            <p>
+                                {totalPriceCart}
+                                <span className={cx('unit')}>k</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
-    } else {
-        return (
-            <div className={cx('wrapper-empty')}>
-                <img className={cx('image-empty')} src={images.cart} alt="" />
-                <span className={cx('note')}>Chưa có sản phẩm</span>
-            </div>
-        );
-    }
+            ) : (
+                <div
+                    className={cx('wrapper-empty')}
+                    onClick={() => {
+                        setIsShowCart(true);
+                    }}
+                >
+                    <img className={cx('image-empty')} src={images.cart} alt="" />
+                    <div className={cx('total-quantity')}>
+                        <p>{cartItems.length}</p>
+                    </div>
+                </div>
+            )}
+        </>
+    );
 }
 
 export default Cart;
