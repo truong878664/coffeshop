@@ -11,7 +11,7 @@ $headercolor: rgb(249, 249, 249);
     // margin-top: 16px;
     padding: 40px 0 80px;
     position: fixed;
-    top: 0;
+    top: -5px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -59,4 +59,10 @@ $headercolor: rgb(249, 249, 249);
 }
 .name {
     font-family: var(--font-heading);
+}
+
+@media (max-width: 740px) {
+    .mobile-search {
+        position: absolute;
+    }
 }

@@ -35,6 +35,7 @@ function Pay() {
 
     return (
         <div className={cx('grid', 'wide', 'wrapper')}>
+            {/* cart */}
             <div className={cx('cart')}>
                 <h3 className={cx('cart-heading')}>Giỏ hàng</h3>
                 <div className={cx('content')}>
@@ -59,6 +60,8 @@ function Pay() {
                     )}
                 </div>
             </div>
+
+            {/* payment */}
             <div className={cx('payment')}>
                 <h3 className={cx('payment-heading')}>Đơn hàng</h3>
                 <div className={cx('discount')}>

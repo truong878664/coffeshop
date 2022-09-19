@@ -51,6 +51,7 @@ function ProductDetails() {
                     <div>{(currentItem.price * 1000).toLocaleString()} đ</div>
                 </div>
                 <p className={cx('describe')}>{currentItem.describe}</p>
+
                 <div className={cx('action')}>
                     <form className={cx('size')}>
                         <input type="radio" id="s" name="size" value={'s'} onChange={handleSetSize} hidden />
@@ -70,11 +71,13 @@ function ProductDetails() {
                     </button>
                 </div>
             </div>
+
             <div className={cx('image-product')}>
                 <div className={cx('circle')} style={{ backgroundColor: currentItem.color }}></div>
                 <div className={cx('layer')} style={{ backgroundImage: `url("${images.coffeeNut}")` }}></div>
                 <img src={currentItem?.src} alt="avatar product" className={cx('image')} />
             </div>
+
             <div className={cx('related-product')}>
                 {getRelatedProduct().map((data, index) => (
                     <ProductMini key={index} data={data} />

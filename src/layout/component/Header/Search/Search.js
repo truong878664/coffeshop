@@ -63,24 +63,33 @@ function Search() {
             </div>
 
             {isShowSearch && (
-                <div className={cx('search-value')}>
-                    <div onClick={() => setIsShowSearch(false)} className={cx('overlay')}></div>
-                    <h5 className={cx('heading')}>
-                        Kết quả tìm kiếm
-                        <FontAwesomeIcon icon={faSearch} className={cx('icon')} />
-                    </h5>
-                    <div className={cx('content')}>
-                        {searchProductValue && searchProductValue.length > 0 ? (
-                            searchProductValue.map((item) => (
-                                <ProductItemSearch key={item.id} data={{ item, setIsShowSearch, setSearchValue }} />
-                            ))
-                        ) : (
-                            <p>
-                                Bạn chưa nhập tìm kiếm hoặc không có sản phẩm nào phù hợp, vui lòng nhập từ khóa khác!
-                            </p>
-                        )}
+                <>
+                    <div
+                        onClick={() => {
+                            setIsShowSearch(false);
+                            setSearchValue('');
+                        }}
+                        className={cx('overlay')}
+                    ></div>
+                    <div className={cx('search-value')}>
+                        <h5 className={cx('heading')}>
+                            Kết quả tìm kiếm
+                            <FontAwesomeIcon icon={faSearch} className={cx('icon')} />
+                        </h5>
+                        <div className={cx('content')}>
+                            {searchProductValue && searchProductValue.length > 0 ? (
+                                searchProductValue.map((item) => (
+                                    <ProductItemSearch key={item.id} data={{ item, setIsShowSearch, setSearchValue }} />
+                                ))
+                            ) : (
+                                <p>
+                                    Bạn chưa nhập tìm kiếm hoặc không có sản phẩm nào phù hợp, vui lòng nhập từ khóa
+                                    khác!
+                                </p>
+                            )}
+                        </div>
                     </div>
-                </div>
+                </>
             )}
         </div>
     );

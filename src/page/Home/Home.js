@@ -37,14 +37,14 @@ function Home() {
             {/* new product */}
 
             <div className={cx('row')}>
-                <div className={cx('col', 'l-12', 'l-o-2')}>
+                <div className={cx('col', 'l-12', 'l-o-2', 'm-12', 'c-12')}>
                     <div className={cx('heading')}>Sản phẩm mới</div>
                 </div>
 
                 {getNewItem.map((data, index) => {
                     if (index === 0) {
                         return (
-                            <div key={data.id} className={cx('col', 'l-2', 'l-o-2')}>
+                            <div key={data.id} className={cx('col', 'l-2', 'l-o-2', 'm-6', 'c-6')}>
                                 <ProductItem
                                     name={data.name}
                                     price={data.price}
@@ -56,7 +56,7 @@ function Home() {
                         );
                     } else {
                         return (
-                            <div key={data.id} className={cx('col', 'l-2')}>
+                            <div key={data.id} className={cx('col', 'l-2', 'm-6', 'c-6')}>
                                 <ProductItem
                                     name={data.name}
                                     price={data.price}
@@ -73,13 +73,13 @@ function Home() {
             {/* common product */}
 
             <div className={cx('row')}>
-                <div className={cx('col', 'l-12', 'l-o-2')}>
+                <div className={cx('col', 'l-12', 'l-o-2', 'm-12', 'c-12')}>
                     <div className={cx('heading')}>Sản phẩm bán chạy</div>
                 </div>
                 {getComonItem.map((data, index) => {
                     if (index === 0) {
                         return (
-                            <div key={data.id} className={cx('col', 'l-4', 'l-o-2')}>
+                            <div key={data.id} className={cx('col', 'l-4', 'l-o-2', 'm-12', 'c-12')}>
                                 <ProductItem
                                     name={data.name}
                                     price={data.price}
@@ -93,7 +93,7 @@ function Home() {
                         );
                     } else {
                         return (
-                            <div key={data.id} className={cx('col', 'l-2')}>
+                            <div key={data.id} className={cx('col', 'l-2', 'm-6', 'c-6')}>
                                 <ProductItem
                                     name={data.name}
                                     price={data.price}
@@ -111,13 +111,13 @@ function Home() {
             {/* sale product */}
 
             <div className={cx('row')}>
-                <div className={cx('col', 'l-12', 'l-o-2')}>
+                <div className={cx('col', 'l-12', 'l-o-2', 'm-12', 'c-12')}>
                     <div className={cx('heading')}>Siêu giảm giá</div>
                 </div>
                 {getSaleItem.map((data, index) => {
                     if (index === 0) {
                         return (
-                            <div key={data.id} className={cx('col', 'l-4', 'l-o-2')}>
+                            <div key={data.id} className={cx('col', 'l-4', 'l-o-2', 'm-12', 'c-12')}>
                                 <ProductItem
                                     name={data.name}
                                     price={data.price}
@@ -131,7 +131,7 @@ function Home() {
                         );
                     } else {
                         return (
-                            <div key={data.id} className={cx('col', 'l-2')}>
+                            <div key={data.id} className={cx('col', 'l-2', 'm-6', 'c-6')}>
                                 <ProductItem
                                     name={data.name}
                                     price={data.price}

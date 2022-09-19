@@ -20,7 +20,7 @@ function Header() {
                             See Tea.
                         </div>
                     </div>
-                    <div className={cx('col', 'l-3', 'm-4', 'c-0')}>
+                    <div className={cx('col', 'l-3', 'm-4', 'mobile-search')}>
                         <Search />
                     </div>
                     <div className={cx('col', 'l-3', 'm-4', 'c-6')}>

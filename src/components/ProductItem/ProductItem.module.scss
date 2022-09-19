@@ -1,14 +1,11 @@
 .wrapper {
-    // background-color: var(--background-color);
     border: 2px solid var(--box-color);
     border-radius: 14px;
     padding: 8px;
     box-shadow: 3px 3px 0 var(--box-color);
     height: 160px;
     position: relative;
-    // width: 100%;
-    margin-bottom: 16px;
-    margin: 0 8px;
+    margin: 0 8px 16px;
     display: block;
     cursor: zoom-in;
 }
@@ -31,6 +28,7 @@
     line-height: 21px;
     box-shadow: 1px 1px 0 var(--box-color);
     font-weight: 600;
+    z-index: 500;
 }
 
 .Hot {

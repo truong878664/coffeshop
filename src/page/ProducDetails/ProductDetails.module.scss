@@ -1,12 +1,11 @@
 .wrapper {
-    // background-color: #ccc;
     height: 100vh;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    // margin-top: 200px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 //information
@@ -15,7 +14,6 @@
     flex: 3;
     margin-right: 32px;
     height: 500px;
-    // align-self: stretch;
     padding-bottom: 100px;
     display: block;
 }
@@ -95,7 +93,6 @@
 
 //image
 .image-product {
-    // background-color: beige;
     flex: 3;
     position: relative;
     margin-right: 32px;
@@ -149,10 +146,8 @@
 //related product
 
 .related-product {
-    // background-color: bisque;
     flex: 1;
     margin-left: 40px;
-    // background-color: #1c6758;
     position: relative;
 }
 
@@ -168,4 +163,39 @@
     background-size: cover;
     z-index: -2000;
     opacity: 10%;
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .wrapper {
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1023px) {
+    .wrapper {
+        max-width: 800px;
+    }
+
+    .action {
+        display: flex;
+        flex-direction: column;
+    }
+    .size {
+        label {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .wrapper {
+        margin-top: 160px;
+
+        max-width: 500px;
+    }
+    .information {
+        flex: 100%;
+        margin: 0;
+        padding: 0 8px;
+    }
 }

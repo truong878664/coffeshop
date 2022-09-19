@@ -4,9 +4,8 @@ import style from './Product.module.scss';
 import ProductItem from '~/components/ProductItem';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretLeft, faListSquares } from '@fortawesome/free-solid-svg-icons';
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 import productDatas from '~/data/product.json';
-import ProductPay from '~/components/ProductPay/ProductPay';
 
 const cx = classNames.bind(style);
 const MENU_ITEM = [
@@ -96,7 +95,7 @@ function Product() {
         <div className={cx('wrapper')}>
             <div className={cx('grid', 'wide')}>
                 <div className={cx('row')}>
-                    <div className={cx('col, l-2')}>
+                    <div className={cx('col, l-2', 'm-6', 'c-8')}>
                         <div className={cx('catelary')}>
                             <p className={cx('heading')}>Thực đơn</p>
                             {menuItem.length > 1 && (
@@ -131,11 +130,11 @@ function Product() {
                             </ul>
                         </div>
                     </div>
-                    <div className={cx('col', 'l-10')}>
+                    <div className={cx('col', 'l-10', 'c-12')}>
                         <div className={cx('product')}>
                             <div className={cx('row')}>
                                 {currentProduct.map((data, index) => (
-                                    <div key={index} className={cx('col', 'l-2-4', 'product-item')}>
+                                    <div key={index} className={cx('col', 'l-2-4', 'c-6', 'product-item')}>
                                         <ProductItem
                                             name={data.name}
                                             price={data.price}

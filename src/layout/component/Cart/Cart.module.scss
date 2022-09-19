@@ -1,7 +1,7 @@
 .wrapper {
     position: fixed;
-    left: 30px;
-    bottom: 30px;
+    left: 3vw;
+    bottom: 15vh;
     max-width: 300px;
     width: 100%;
     min-height: 200px;
@@ -91,8 +91,8 @@
     width: 100px;
     height: 100px;
     position: fixed;
-    left: 100px;
-    bottom: 30px;
+    left: 3vw;
+    bottom: 15vh;
     border: 2px solid var(--box-color);
     border-radius: 30px;
     box-shadow: 4px 4px 0 var(--box-color);
@@ -100,7 +100,7 @@
     background-color: var(--white-color);
     cursor: pointer;
     &:hover {
-        bottom: 40px;
+        transform: translateY(-10px);
     }
     &:hover > .note {
         display: block;
@@ -190,4 +190,15 @@
 
 .label {
     margin-right: 8px;
+}
+
+@media (max-width: 740px) {
+    .wrapper-empty {
+        width: 70px;
+        height: 70px;
+    }
+    .image-empty {
+        height: 130px;
+        bottom: -25px;
+    }
 }

@@ -10,10 +10,12 @@
 
 .product {
     background-color: transparent;
+    padding-bottom: 100px;
 }
 
 .product-item {
     margin-top: 40px;
+    min-width: 180px;
 }
 
 .panner {
@@ -26,6 +28,8 @@
     pointer-events: none;
     user-select: none;
     opacity: 0.2;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo-image {
